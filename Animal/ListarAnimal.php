@@ -57,6 +57,7 @@
                 <thead>
                     <tr>
                         <th>Código</th>
+                        <th>foto</th>
                         <th>Nome</th>
                         <th>Espécie</th>
                         <th>Raça</th>
@@ -79,6 +80,15 @@
                         $idade = $idadeOb->format('%Y');*/
                         echo "<tr>";
                         echo "<td>" . $row['id'] . "</td>";
+                        echo "<td>" . $row['foto'] . "</td>";
+                        if($row['foto']=="");
+                            echo "<td></td>";
+                        }
+                        else
+                        {
+                            echo "<td><img src='".$row['foto'].
+                            "' width='80' height='100'/></td>";
+                        }
                         echo "<td>" . $row['nomeAnimal'] . "</td>";
                         echo "<td>" . $row['especie'] . "</td>";
                         echo "<td>" . $row['raca'] . "</td>";

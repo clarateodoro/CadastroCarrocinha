@@ -47,7 +47,12 @@
     <section>
         <div class="principal box">
             <h2>Cadastro de Animal</h2>
-            <form action="./CadastroAnimalExe.php" method="post">
+            <form action="./CadastroAnimalExe.php" method="post" 
+            enctype="multipart/form-data">
+                <div>
+                    <label for="foto">Foto</label>
+                    <input type="file" name="foto" id="foto" accept="image/*"/>
+                </div>
                 <div>
                     <label for="nome">Nome</label>
                     <input type="text" name="nome" id="nome" />
